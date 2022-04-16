@@ -13,6 +13,12 @@ resource "azurerm_management_lock" "rglock" {
   lock_level = "ReadOnly"
   notes      = "This Resource Group is Read-Only"
 }
+az acr registry image {
+    name           =  "myregistry" 
+    image          =   "my_image" 
+    write-enabled  =   false
+    delete-enabled =   false
+}
 
 resource "azurerm_container_registry" "acr" {
   name                          = "containerRegistry1"
