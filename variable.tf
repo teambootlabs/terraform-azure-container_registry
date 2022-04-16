@@ -45,23 +45,4 @@ variable "public_network_access_enabled" {
   description = "Delete datadisk when machine is terminated."
   default     = false
 }
-variable "resource-group-level" {
-  type        = string
-  description = "Enter the resource group level name"
-  default     = "private_registry"
-}
-variable "scope" {
-  type        = string
-  description = "Enter the resource group scope"
-  default     = "goup.342"
-}
-variable "lock_level" {
-  type        = string
-  description = "Enter the resource group locklevel"
-  default     = "READ"
-}
-variable "notes" {
-  type        = string
-  description = "notes"
-  default     = "READ_only"
-}
+
