@@ -7,9 +7,9 @@ resource "azurerm_resource_group" "rg" {
   name     = "example-resources"
   location = var.location
 }
-resource "azurerm_management_lock" "resource-group-level" {
+resource "azurerm_management_lock" "rglock" {
   name       = "resource-group-level"
-  scope      = "azurerm_resource_group.example.id"
+  scope      = azurerm_resource_group.azure_rg.id
   lock_level = "ReadOnly"
   notes      = "This Resource Group is Read-Only"
 }
